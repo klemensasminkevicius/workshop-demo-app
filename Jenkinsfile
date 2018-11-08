@@ -13,5 +13,13 @@ python3 -m venv repo
 pip install -r requirements.txt'''
       }
     }
+    stage('') {
+      steps {
+        sh '''# Activate python virtual environment
+. repo/bin/activate
+#Run pytest and export coverage report
+pytest --cov-report xml --cov-report term --cov ./lib/'''
+      }
+    }
   }
 }

@@ -13,7 +13,7 @@ python3 -m venv repo
 pip install -r requirements.txt'''
       }
     }
-    stage('') {
+    stage('test') {
       steps {
         sh '''# Activate python virtual environment
 . repo/bin/activate
